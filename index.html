@@ -3,53 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API Quiz App</title>
-    <style>
-      .choices {
-        list-style: none;
-      }
-    </style>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
-    <div class="body">
-      <header>
-        <h1>
-          Quiz App
-        </h1>
-        <button id="start-quiz">
-          Start Quiz
-        </button>
-        <button id="change-question" class="hide">
-          Change Question
-        </button>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas architecto ipsa
-          excepturi aut non
-          laudantium sequi fugit officiis optio deleniti asperiores rem eius laborum maxime blanditiis culpa, quis iste?
-        </p>
-      </header>
-      <main>
-        <div id="timer">
-  
-        </div>
-        <section class="container">
-          <div id="question">
-            Question
-          </div>
-          <ul id="option-list" class="choices">
-            <button class="btn">1. Answer</button>
-            <button class="btn">2. Answer</button>
-            <button class="btn">3. Answer</button>
-            <button class="btn">4. Answer</button>
-          </ul>
-        </section>
-
-        <div id="question-result">
-  
-        </div>
-      </main>
+    <div id="btns">
+      <button id="start-btn">
+        Start
+      </button>
+      <button>
+        High Scores
+      </button>
     </div>
+    <section class="quiz-box hide">
+      <div id="timer"></div>
+      <div id="question"></div>
+      <ul id="option-list"></ul>
+      <div id="question-result"></div>
+    </section>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
