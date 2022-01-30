@@ -34,6 +34,10 @@ function endQuiz() {
   clearInterval(intervalId);
   var body = document.body;
   body.innerHTML = "Game over, You scored " + correctCount;
+  var saveScores = function() {
+    localStorage.setItem("score", JSON.stringify(correctCount));
+  }
+  saveScores();
 }
 
 function updateTime() {
@@ -62,7 +66,7 @@ function renderQuestion() {
   var choicesLenth = choices.length;
 
   for (var i = 0; i < choicesLenth; i++) {
-    var questionListItem = document.createElement("li");
+    var questionListItem = document.createElement("button");
     questionListItem.textContent = choices[i];
     optionListEl.append(questionListItem);
   }
@@ -78,7 +82,7 @@ function nextQuestion() {
 
 function checkAnswer(event) {
   clearInterval(intervalId);
-  if (event.target.matches("li")) {
+  if (event.target.matches("button")) {
     var answer = event.target.textContent;
     if (answer === questions[questionIndex].answer) {
       questionResultEl.textContent = "Correct";
@@ -92,6 +96,7 @@ function checkAnswer(event) {
   setTimeout(nextQuestion, 2000);
 }
 
-renderQuestion();
+
 optionListEl.addEventListener("click", checkAnswer);
 startButtonEl.addEventListener('click', startQuiz);
+startButtonEl.addEventListener('click', renderQuestion);
