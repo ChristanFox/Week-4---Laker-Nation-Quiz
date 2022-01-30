@@ -32,8 +32,9 @@ function startQuiz() {
 
 function endQuiz() {
   clearInterval(intervalId);
-  var body = document.body;
-  body.innerHTML = "Game over, You scored " + correctCount;
+  // var body = document.body;
+  // body.innerHTML = "Game over, You scored " + correctCount;
+  window.location.assign("./end.html")
   var saveScores = function() {
     localStorage.setItem("score", JSON.stringify(correctCount));
   }
