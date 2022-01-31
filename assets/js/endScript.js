@@ -2,8 +2,6 @@ var saveButtonEl = document.querySelector("#saveScoreBtn");
 var mostRecentScore = localStorage.getItem("score");
 var finalScore = document.getElementById("finalScore");
 var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
-
 
 finalScore.innerText = mostRecentScore;
 

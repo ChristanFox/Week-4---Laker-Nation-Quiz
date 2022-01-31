@@ -6,16 +6,14 @@
     <title>High Scores</title>
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
-  <body>
-    <div id="btns">
-      <a class="btn" href="./index.html">Home</a>
+  <body class="flex-center bg-purple">
+    <div class="container flex-center bg-purple">
+        <div id="highScores">
+            <h1 id="">Wall of Fame</h1>
+            <ul id="highScoresList"></ul>
+            <a class="btn bg-gold flex-center" href="./index.html">Go Home</a>
+        </div>
     </div>
-    <section class="quiz-box hide">
-      <div id="timer"></div>
-      <div id="question"></div>
-      <ul id="option-list"></ul>
-      <div id="question-result"></div>
-    </section>
-    <script src="./assets/js/endscript.js"></script>
+    <script class="flex-center" src="./assets/js/scoresScript.js"></script>
   </body>
 </html>
