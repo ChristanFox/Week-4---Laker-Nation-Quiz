@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+header h1 {
+    font-size: 100px;
+}
 .flex-center {
     display: flex;
     justify-content: center;
@@ -21,7 +24,6 @@
 body {
     min-height: 100vh;
 }
-
 #btns button, .score, .restart, .quiz-box, .quiz-box ul button, .btn {
     font-size: 25px;
     font-weight: 500;
